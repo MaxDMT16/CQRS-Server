@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Abstraction", "0. Abstraction", "{F06C08A9-6CB5-448F-AD4B-D5946B9F39A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.Abstraction", "Sirius.Abstraction\Sirius.Abstraction.csproj", "{AD05B374-90F9-4F05-9C19-B4A91D80DE48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Implementation", "1. Implementation", "{94D4B7E5-52FB-4769-9574-CE3C330AA1A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.Database", "Sirius.Database\Sirius.Database.csproj", "{35A4A7AF-C49A-4284-93CD-FE2E4EA788D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.Domain", "Sirius.Domain\Sirius.Domain.csproj", "{756C52A1-7247-4A68-9651-8F6384F97C4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Application", "2. Application", "{4A0CD5F2-E5B6-4A88-859B-0C4CE09EF6AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Siruis.Application", "Siruis.Application\Siruis.Application.csproj", "{09672E49-7674-4C1D-ACD4-85FB3CB9D439}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. WebAPI", "3. WebAPI", "{BE83A33B-4676-4EE0-9272-46150448BED0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirius.WebAPI", "Sirius.WebAPI\Sirius.WebAPI.csproj", "{4197AA8D-AD39-48E9-B5A9-1B68AFB23D67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD05B374-90F9-4F05-9C19-B4A91D80DE48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD05B374-90F9-4F05-9C19-B4A91D80DE48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD05B374-90F9-4F05-9C19-B4A91D80DE48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD05B374-90F9-4F05-9C19-B4A91D80DE48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35A4A7AF-C49A-4284-93CD-FE2E4EA788D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35A4A7AF-C49A-4284-93CD-FE2E4EA788D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35A4A7AF-C49A-4284-93CD-FE2E4EA788D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35A4A7AF-C49A-4284-93CD-FE2E4EA788D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{756C52A1-7247-4A68-9651-8F6384F97C4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{756C52A1-7247-4A68-9651-8F6384F97C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{756C52A1-7247-4A68-9651-8F6384F97C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{756C52A1-7247-4A68-9651-8F6384F97C4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09672E49-7674-4C1D-ACD4-85FB3CB9D439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09672E49-7674-4C1D-ACD4-85FB3CB9D439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09672E49-7674-4C1D-ACD4-85FB3CB9D439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09672E49-7674-4C1D-ACD4-85FB3CB9D439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4197AA8D-AD39-48E9-B5A9-1B68AFB23D67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4197AA8D-AD39-48E9-B5A9-1B68AFB23D67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4197AA8D-AD39-48E9-B5A9-1B68AFB23D67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4197AA8D-AD39-48E9-B5A9-1B68AFB23D67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AD05B374-90F9-4F05-9C19-B4A91D80DE48} = {F06C08A9-6CB5-448F-AD4B-D5946B9F39A5}
+		{35A4A7AF-C49A-4284-93CD-FE2E4EA788D8} = {94D4B7E5-52FB-4769-9574-CE3C330AA1A4}
+		{756C52A1-7247-4A68-9651-8F6384F97C4C} = {94D4B7E5-52FB-4769-9574-CE3C330AA1A4}
+		{09672E49-7674-4C1D-ACD4-85FB3CB9D439} = {4A0CD5F2-E5B6-4A88-859B-0C4CE09EF6AB}
+		{4197AA8D-AD39-48E9-B5A9-1B68AFB23D67} = {BE83A33B-4676-4EE0-9272-46150448BED0}
+	EndGlobalSection
+EndGlobal
