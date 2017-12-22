@@ -31,10 +31,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -58,6 +58,8 @@
     <Compile Include="Entities\Price.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\Transaction.cs" />
+    <Compile Include="Handlers\DatabaseQueryHandlerBase.cs" />
+    <Compile Include="Handlers\DatabaseCommandHandlerBase.cs" />
     <Compile Include="Migrations\201712220551256_InitialMigration.cs" />
     <Compile Include="Migrations\201712220551256_InitialMigration.Designer.cs">
       <DependentUpon>201712220551256_InitialMigration.cs</DependentUpon>
@@ -73,6 +75,12 @@
     <EmbeddedResource Include="Migrations\201712220551256_InitialMigration.resx">
       <DependentUpon>201712220551256_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sirius.Abstraction\Sirius.Abstraction.csproj">
+      <Project>{ad05b374-90f9-4f05-9c19-b4a91d80de48}</Project>
+      <Name>Sirius.Abstraction</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

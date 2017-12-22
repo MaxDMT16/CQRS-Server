@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationModule.cs" />
     <Compile Include="Buses\CommandBus.cs" />
     <Compile Include="Buses\QueryBus.cs" />
+    <Compile Include="Factories\HttpClientFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
