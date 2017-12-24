@@ -123,6 +123,7 @@
     <Compile Include="Controllers\Public\Models\LoginResponseModel.cs" />
     <Compile Include="Controllers\Public\RegistrationController.cs" />
     <Compile Include="Controllers\User\CategoryController.cs" />
+    <Compile Include="Controllers\User\OrderController.cs" />
     <Compile Include="Controllers\User\ProductController.cs" />
     <Compile Include="Controllers\User\TransactionController.cs" />
     <Compile Include="Filters\TokenHeaderOperationFilter.cs" />

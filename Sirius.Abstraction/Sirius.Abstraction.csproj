@@ -55,6 +55,9 @@
     <Compile Include="Contracts\Commands\Category\DeleteCategoryCommand.cs" />
     <Compile Include="Contracts\Commands\Category\UpdateCategoryCommand.cs" />
     <Compile Include="Contracts\Commands\Customer\CreateCustomerCommand.cs" />
+    <Compile Include="Contracts\Commands\Order\CreateOrderCommand.cs" />
+    <Compile Include="Contracts\Commands\Order\DeleteOrderCommand.cs" />
+    <Compile Include="Contracts\Commands\Order\UpdateOrderCommand.cs" />
     <Compile Include="Contracts\Commands\Transaction\CreateTransactionCommand.cs" />
     <Compile Include="Contracts\Commands\Product\CreateProductCommand.cs" />
     <Compile Include="Contracts\Commands\Product\DeleteProductCommand.cs" />
@@ -65,6 +68,8 @@
     <Compile Include="Contracts\Queries\Category\CategoriesResponse.cs" />
     <Compile Include="Contracts\Queries\Customer\CustomerIdByCredentialsQuery.cs" />
     <Compile Include="Contracts\Queries\Customer\CustomerIdResponse.cs" />
+    <Compile Include="Contracts\Queries\Order\OrdersQuery.cs" />
+    <Compile Include="Contracts\Queries\Order\OrdersQueryResult.cs" />
     <Compile Include="Contracts\Queries\Product\ProductsQuery.cs" />
     <Compile Include="Contracts\Queries\Product\ProductsResponse.cs" />
     <Compile Include="Contracts\Queries\Transaction\TransactionsQuery.cs" />

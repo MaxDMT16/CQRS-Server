@@ -64,6 +64,9 @@
     <Compile Include="Handler\Command\Category\DeleteCategoryCommandHandler.cs" />
     <Compile Include="Handler\Command\Category\UpdateCategoryCommandHandler.cs" />
     <Compile Include="Handler\Command\Customer\CreateCustomerCommandHandler.cs" />
+    <Compile Include="Handler\Command\Order\CreateOrderCommandHandler.cs" />
+    <Compile Include="Handler\Command\Order\DeleteOrderCommandHandler.cs" />
+    <Compile Include="Handler\Command\Order\UpdateOrderCommandHandler.cs" />
     <Compile Include="Handler\Command\Product\CreateProductCommandHandler.cs" />
     <Compile Include="Handler\Command\Product\DeleteProductCommandHandler.cs" />
     <Compile Include="Handler\Command\Product\UpdateProductCommandHandler.cs" />
@@ -72,6 +75,7 @@
     <Compile Include="Handler\Command\Transaction\UpdateTransactionCommandHandler.cs" />
     <Compile Include="Handler\Queries\Category\CategoriesQueryHandler.cs" />
     <Compile Include="Handler\Queries\Customer\CustomerIdByCredentialQueryHandler.cs" />
+    <Compile Include="Handler\Queries\Oreder\OredersQueryHandler.cs" />
     <Compile Include="Handler\Queries\Product\ProductsQueryHandler.cs" />
     <Compile Include="Handler\Queries\Transaction\TransactionsQueryHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
