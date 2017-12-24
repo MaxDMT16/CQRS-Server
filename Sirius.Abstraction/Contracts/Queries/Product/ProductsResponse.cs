@@ -12,6 +12,7 @@ namespace Sirius.Abstraction.Contracts.Queries.Product
         {
             public Guid Id { get; set; }
             public string Title { get; set; }
+            public Guid CategoryId { get; set; }
             public ICollection<Price> Prices { get; set; }
         }
 

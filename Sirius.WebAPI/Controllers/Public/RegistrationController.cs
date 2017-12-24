@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using System.Web.Http;
 using Sirius.Abstraction.Contracts.Commands;
+using Sirius.Abstraction.Contracts.Commands.Customer;
 using Sirius.Abstraction.CQRS;
 using Sirius.Abstraction.Services;
 using Sirius.WebAPI.Controllers.Abstract;

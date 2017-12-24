@@ -20,6 +20,7 @@ namespace Sirius.Domain.Handler.Queries.Product
             {
                 Id = product.Id,
                 Title = product.Title,
+                CategoryId = product.CategoryId,
                 Prices = product.Prices.Select(price => new ProductsResponse.Price
                 {
                     Amount = price.Amount,

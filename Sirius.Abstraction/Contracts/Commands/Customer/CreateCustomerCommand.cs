@@ -1,6 +1,6 @@
 ﻿using Sirius.Abstraction.CQRS;
 
-namespace Sirius.Abstraction.Contracts.Commands
+namespace Sirius.Abstraction.Contracts.Commands.Customer
 {
     public class CreateCustomerCommand : ICommand
     {

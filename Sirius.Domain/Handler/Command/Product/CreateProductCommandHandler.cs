@@ -21,7 +21,9 @@ namespace Sirius.Domain.Handler.Command.Product
                 Title = context.Title,
                 Prices = context.Prices.Select(price => new Price
                 {
-                    Id = price.PriceId
+                    Color = price.Color,
+                    Size = price.Size,
+                    Amount = price.Amount
                 }).ToList(),
                 CategoryId = context.CategoryId
             };

@@ -5,7 +5,7 @@ using Sirius.Abstraction.Contracts.Queries.Customer;
 using Sirius.Database.Context;
 using Sirius.Database.Handlers;
 
-namespace Sirius.Domain.Handler.Queries
+namespace Sirius.Domain.Handler.Queries.Customer
 {
     public class CustomerIdByCredentialQueryHandler : DatabaseQueryHandlerBase<CustomerIdByCredentialsQuery, CustomerIdResponse>
     {

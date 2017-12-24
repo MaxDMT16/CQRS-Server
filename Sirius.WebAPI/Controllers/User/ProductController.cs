@@ -29,5 +29,19 @@ namespace Sirius.WebAPI.Controllers.User
         {
             await CommandBus.Execute(command);
         }
+
+        [HttpPut]
+        [Route]
+        public async Task UpdateProduct(UpdateProductCommand command)
+        {
+            await CommandBus.Execute(command);
+        }
+
+        [HttpDelete]
+        [Route]
+        public async Task DeleteProduct(DeleteProductCommand command)
+        {
+            await CommandBus.Execute(command);
+        }
     }
 }

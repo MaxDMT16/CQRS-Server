@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Sirius.Abstraction.Contracts.Commands;
+using Sirius.Abstraction.Contracts.Commands.Customer;
 using Sirius.Database.Context;
 using Sirius.Database.Entities;
 using Sirius.Database.Handlers;

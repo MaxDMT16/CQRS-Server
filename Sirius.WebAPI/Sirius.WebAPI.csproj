@@ -124,6 +124,7 @@
     <Compile Include="Controllers\Public\RegistrationController.cs" />
     <Compile Include="Controllers\User\CategoryController.cs" />
     <Compile Include="Controllers\User\ProductController.cs" />
+    <Compile Include="Controllers\User\TransactionController.cs" />
     <Compile Include="Filters\TokenHeaderOperationFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
