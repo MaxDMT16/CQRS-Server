@@ -1,7 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
+using Autofac;
+using Autofac.Integration.WebApi;
+using Sirius.Database;
+using Sirius.Domain;
+using Siruis.Application;
 
 namespace Sirius.WebAPI
 {
@@ -9,9 +11,6 @@ namespace Sirius.WebAPI
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
-
-            // Web API routes
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
@@ -19,6 +18,20 @@ namespace Sirius.WebAPI
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            var builder = new ContainerBuilder();
+
+            builder.RegisterModule<CoreImplementationModule>();
+            builder.RegisterModule<ApplicationModule>();
+            builder.RegisterModule<ApiModule>();
+            builder.RegisterModule<DatabaseModule>();
+            builder.RegisterWebApiFilterProvider(config);
+
+            var container = builder.Build();
+
+            config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
+            
+            config.EnsureInitialized();
         }
     }
 }

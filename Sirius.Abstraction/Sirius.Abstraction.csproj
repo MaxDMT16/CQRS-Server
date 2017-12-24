@@ -30,7 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression.FileSystem" />
@@ -44,7 +51,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\Commands\Category\CreateCategoryCommand.cs" />
+    <Compile Include="Contracts\Commands\Category\DeleteCategoryCommand.cs" />
+    <Compile Include="Contracts\Commands\Category\UpdateCategoryCommand.cs" />
     <Compile Include="Contracts\Commands\CreateCustomerCommand.cs" />
+    <Compile Include="Contracts\Commands\Product\CreateProductCommand.cs" />
+    <Compile Include="Contracts\Queries\Category\CategoriesQuery.cs" />
+    <Compile Include="Contracts\Queries\Category\CategoriesResponse.cs" />
+    <Compile Include="Contracts\Queries\Customer\CustomerIdByCredentialsQuery.cs" />
+    <Compile Include="Contracts\Queries\Customer\CustomerIdResponse.cs" />
+    <Compile Include="Contracts\Queries\Product\ProductsQuery.cs" />
+    <Compile Include="Contracts\Queries\Product\ProductsResponse.cs" />
     <Compile Include="CQRS\ICommand.cs" />
     <Compile Include="CQRS\ICommandBus.cs" />
     <Compile Include="CQRS\ICommandHandler.cs" />
@@ -58,5 +75,10 @@
     <Compile Include="Services\ITokenService.cs" />
     <Compile Include="Services\TokenPayload.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

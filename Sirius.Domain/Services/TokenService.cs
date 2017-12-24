@@ -15,25 +15,23 @@ namespace Sirius.Domain.Services
             _configuration = configuration;
         }
 
-        public string Create<TPayload>(TPayload payload, string key)
+        public string Create<TPayload>(TPayload payload)
             where TPayload : TokenPayload
         {
-            var keyBytes = Convert.FromBase64String(key);
+            var keyBytes = Convert.FromBase64String(_configuration.Key);
 
             var token = JWT.Encode(payload, keyBytes, JwsAlgorithm.HS512);
 
             return token;
         }
 
-        public async Task<TPayload> Verify<TPayload>(string accessToken) where TPayload : TokenPayload
+        public async Task<TPayload> Verify<TPayload>(string token) where TPayload : TokenPayload
         {
             try
             {
-                var payload = JWT.Payload<TPayload>(accessToken);
-                
                 var keyBytes = Convert.FromBase64String(_configuration.Key);
 
-                var decode = JWT.Decode<TPayload>(accessToken, keyBytes);
+                var decode = JWT.Decode<TPayload>(token, keyBytes);
 
                 return decode;
             }

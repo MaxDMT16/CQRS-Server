@@ -4,11 +4,11 @@ using Sirius.Database.Context;
 
 namespace Sirius.Database.Handlers
 {
-    public abstract class DatbaseCommandHandlerBase<TCommand> : ICommandHandler<TCommand> where TCommand: ICommand
+    public abstract class DatabaseCommandHandlerBase<TCommand> : ICommandHandler<TCommand> where TCommand: ICommand
     {
         protected readonly ISiriusDbContext DbContext;
 
-        protected DatbaseCommandHandlerBase(ISiriusDbContext dbContext)
+        protected DatabaseCommandHandlerBase(ISiriusDbContext dbContext)
         {
             DbContext = dbContext;
         }

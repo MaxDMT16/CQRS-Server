@@ -7,12 +7,20 @@ namespace Sirius.Database.Context
 {
     public class SiriusDbContext : DbContext, ISiriusDbContext
     {
-        public DbSet<Customer> Customers { get; }
-        public DbSet<Order> Orders { get; }
-        public DbSet<Product> Products { get; }
-        public DbSet<Price> Price { get; }
-        public DbSet<Category> Categories { get; }
-        public DbSet<Transaction> Transactions { get; }
+        public SiriusDbContext()
+        {
+        }
+
+        public SiriusDbContext(string nameOrConnectionString) : base(nameOrConnectionString)
+        {
+        }
+
+        public IDbSet<Customer> Customers { get; set; }
+        public IDbSet<Order> Orders { get; set; }
+        public IDbSet<Product> Products { get; set; }
+        public IDbSet<Price> Price { get; set; }
+        public IDbSet<Category> Categories { get; set; }
+        public IDbSet<Transaction> Transactions { get; set; }
 
         public IDbConnection Connection => Database.Connection;
 

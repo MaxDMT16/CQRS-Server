@@ -4,7 +4,7 @@ namespace Sirius.Abstraction.Services
 {
     public interface ITokenService
     {
-        string Create<TPayload>(TPayload payload, string key)
+        string Create<TPayload>(TPayload payload)
             where TPayload : TokenPayload;
 
         Task<TPayload> Verify<TPayload>(string accessToken)

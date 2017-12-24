@@ -26,7 +26,7 @@ namespace Sirius.WebAPI.Controllers.Abstract
             CancellationToken cancellationToken)
         {
             IEnumerable<string> allTokens;
-            if (!controllerContext.Request.Headers.TryGetValues("AccessToken", out allTokens))
+            if (!controllerContext.Request.Headers.TryGetValues("Token", out allTokens))
             {
                 throw new InvalidOperationException("Access token not found");
             }

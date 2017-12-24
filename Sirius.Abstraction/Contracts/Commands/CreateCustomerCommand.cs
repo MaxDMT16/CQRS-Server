@@ -10,9 +10,9 @@ namespace Sirius.Abstraction.Contracts.Commands
         public string Password { get; set; }
         public string Phone { get; set; }
 
-        public Address CustomerAddress { get; set; }
+        public CustomerAddress Address { get; set; }
 
-        public class Address
+        public class CustomerAddress
         {
             public string Country { get; set; }
             public string City { get; set; }

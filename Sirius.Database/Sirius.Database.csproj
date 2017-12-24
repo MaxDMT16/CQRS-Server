@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.3.0\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -50,6 +53,7 @@
     <Compile Include="Context\IDbContext.cs" />
     <Compile Include="Context\ISiriusDbContext.cs" />
     <Compile Include="Context\SiriusDbContext.cs" />
+    <Compile Include="DatabaseModule.cs" />
     <Compile Include="Entities\Address.cs" />
     <Compile Include="Entities\Category.cs" />
     <Compile Include="Entities\Customer.cs" />
@@ -64,6 +68,10 @@
     <Compile Include="Migrations\201712220551256_InitialMigration.Designer.cs">
       <DependentUpon>201712220551256_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712232046134_UpdateTransactions.cs" />
+    <Compile Include="Migrations\201712232046134_UpdateTransactions.Designer.cs">
+      <DependentUpon>201712232046134_UpdateTransactions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -74,6 +82,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712220551256_InitialMigration.resx">
       <DependentUpon>201712220551256_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712232046134_UpdateTransactions.resx">
+      <DependentUpon>201712232046134_UpdateTransactions.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

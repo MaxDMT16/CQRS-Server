@@ -1,5 +1,7 @@
-﻿using Autofac;
+﻿using System.Web.Configuration;
+using Autofac;
 using Sirius.Abstraction.CQRS;
+using Sirius.Domain.Configurations;
 using Sirius.Domain.Services;
 
 namespace Sirius.Domain
@@ -19,6 +21,9 @@ namespace Sirius.Domain
             builder.RegisterType<TokenService>().AsImplementedInterfaces();
 
             builder.RegisterType<Sha512Service>().AsImplementedInterfaces();
+
+            var tokenConfigurationSection = WebConfigurationManager.GetSection("TokenSection") as TokenConfigurationSection;
+            builder.RegisterInstance(new TokenConfiguration(tokenConfigurationSection));
         }
     }
 }

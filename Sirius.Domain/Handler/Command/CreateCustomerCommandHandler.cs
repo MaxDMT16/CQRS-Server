@@ -4,9 +4,9 @@ using Sirius.Database.Context;
 using Sirius.Database.Entities;
 using Sirius.Database.Handlers;
 
-namespace Sirius.Domain.Handler
+namespace Sirius.Domain.Handler.Command
 {
-    public class CreateCustomerCommandHandler : DatbaseCommandHandlerBase<CreateCustomerCommand>
+    public class CreateCustomerCommandHandler : DatabaseCommandHandlerBase<CreateCustomerCommand>
     {
         public CreateCustomerCommandHandler(ISiriusDbContext dbContext) : base(dbContext)
         {
@@ -20,10 +20,10 @@ namespace Sirius.Domain.Handler
                 LastName = context.LastName,
                 Address = new Address
                 {
-                    Address1 = context.CustomerAddress.Address1,
-                    City = context.CustomerAddress.City,
-                    Country = context.CustomerAddress.Country,
-                    State = context.CustomerAddress.State
+                    Address1 = context.Address.Address1,
+                    City = context.Address.City,
+                    Country = context.Address.Country,
+                    State = context.Address.State
                 },
                 Email = context.Email,
                 Password = context.Password,
@@ -31,6 +31,7 @@ namespace Sirius.Domain.Handler
             };
 
             DbContext.Customers.Add(customer);
+            await DbContext.SaveChangesAsync();
         }
     }
 }
